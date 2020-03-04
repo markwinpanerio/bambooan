@@ -1,0 +1,1 @@
+# Bambooan Static Page

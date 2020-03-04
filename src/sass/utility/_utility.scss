@@ -1,0 +1,15 @@
+.u-hidden {
+    display: none;
+}
+
+.u-pc-hidden {
+    @include min-screen($breakpoint-mobile) {
+        display: none;
+    }
+}
+
+.u-sp-hidden {
+    @include max-screen($breakpoint-mobile) {
+        display: none;
+    }
+}

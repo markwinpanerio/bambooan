@@ -1,0 +1,46 @@
+{
+  "name": "Frontplate",
+  "version": "5.0.0",
+  "description": "フロントエンド開発の効率をあげるフルスタックテンプレート",
+  "dependencies": {
+    "fullpage.js": "^3.0.7",
+    "gsap": "^2.1.2",
+    "jquery": "^3.3.1",
+    "jquery-bridget": "^2.0.1",
+    "jquery-mousewheel": "^3.1.13",
+    "jquery-scrollify": "^1.0.20",
+    "jquery-ui-dist": "^1.12.1",
+    "jquery.kinetic": "^2.2.4",
+    "jquery.ripples": "^0.6.3",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "masonry-layout": "^4.2.2",
+    "scrollmagic": "^2.0.6",
+    "svg-sprite": "^1.5.0",
+    "swiper": "^4.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "barba.js": "^1.0.0",
+    "imports-loader": "^0.8.0",
+    "jquery-ui-bundle": "^1.12.1-migrate",
+    "uglifyjs-webpack-plugin": "v1.0.0-beta.1",
+    "webpack": "^3.12.0"
+  },
+  "scripts": {
+    "start": "frp build && frp serve -t",
+    "test": "frp task test",
+    "build": "frp build",
+    "serve": "frp serve",
+    "production": "frp build -p",
+    "changelog": "conventional-changelog -p eslint -i CHANGELOG.md -w -s -r 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:frontainer/frontplate.git"
+  },
+  "author": "frontainer",
+  "license": "MIT",
+  "private": true
+}
