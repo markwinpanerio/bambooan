@@ -20042,36 +20042,38 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 
 
-const tl = new __WEBPACK_IMPORTED_MODULE_2_gsap__["a" /* TimelineMax */]();
-tl.to('.landing-mask', 1, {
-  width: 0,
-  ease: Power4.easeOut
+__WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).on('load', function () {
+  const tl = new __WEBPACK_IMPORTED_MODULE_2_gsap__["a" /* TimelineMax */]();
+  tl.to('.landing-mask', 1, {
+    width: 0,
+    ease: Power4.easeOut
+  });
+  tl.to('.landing-image', 2, {
+    scale: 1,
+    opacity: 1,
+    ease: __WEBPACK_IMPORTED_MODULE_2_gsap__["b" /* Expo */].easeOut
+  }, '-=0.6');
+  tl.to('.landing-logo', 0.6, {
+    opacity: 1,
+    top: 0,
+    ease: __WEBPACK_IMPORTED_MODULE_2_gsap__["b" /* Expo */].easeOut
+  }, '-=1');
+  tl.staggerTo('.landing-title span', 1.2, {
+    opacity: 1,
+    top: 0,
+    ease: __WEBPACK_IMPORTED_MODULE_2_gsap__["b" /* Expo */].easeOut
+  }, 0.2, '-=0.6');
+  tl.to('.landing-description', 0.6, {
+    opacity: 1,
+    top: 0,
+    ease: __WEBPACK_IMPORTED_MODULE_2_gsap__["b" /* Expo */].easeOut
+  }, '-=0.8');
+  tl.to('.landing-form', 0.6, {
+    opacity: 1,
+    top: 0,
+    ease: __WEBPACK_IMPORTED_MODULE_2_gsap__["b" /* Expo */].easeOut
+  }, '-=0.6');
 });
-tl.to('.landing-image', 2, {
-  scale: 1,
-  opacity: 1,
-  ease: __WEBPACK_IMPORTED_MODULE_2_gsap__["b" /* Expo */].easeOut
-}, '-=0.6');
-tl.to('.landing-logo', 0.6, {
-  opacity: 1,
-  top: 0,
-  ease: __WEBPACK_IMPORTED_MODULE_2_gsap__["b" /* Expo */].easeOut
-}, '-=1');
-tl.staggerTo('.landing-title span', 1.2, {
-  opacity: 1,
-  top: 0,
-  ease: __WEBPACK_IMPORTED_MODULE_2_gsap__["b" /* Expo */].easeOut
-}, 0.2, '-=0.6');
-tl.to('.landing-description', 0.6, {
-  opacity: 1,
-  top: 0,
-  ease: __WEBPACK_IMPORTED_MODULE_2_gsap__["b" /* Expo */].easeOut
-}, '-=0.8');
-tl.to('.landing-form', 0.6, {
-  opacity: 1,
-  top: 0,
-  ease: __WEBPACK_IMPORTED_MODULE_2_gsap__["b" /* Expo */].easeOut
-}, '-=0.6');
 
 /***/ }
 /******/ ]);
