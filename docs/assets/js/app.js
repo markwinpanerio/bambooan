@@ -20074,6 +20074,25 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).on('load', function () {
     ease: __WEBPACK_IMPORTED_MODULE_2_gsap__["b" /* Expo */].easeOut
   }, '-=0.6');
 });
+__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-form').on('submit', function () {
+  return false;
+});
+__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-form').find('input[type=text]').on('focus', function () {
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).removeClass('is-error');
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.error-message').addClass('is-hidden');
+});
+__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-form-submit').on('click', function () {
+  if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-form').find('input[type=text]').val().length < 1) {
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-form').find('input[type=text]').addClass('is-error');
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.error-message').removeClass('is-hidden');
+  } else {
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).addClass('is-sent');
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-description').fadeOut(function () {
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-description').html('Thank you for subscribing lorem ipsum dolor sit amet, consectetur.');
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-description').fadeIn();
+    });
+  }
+});
 
 /***/ }
 /******/ ]);

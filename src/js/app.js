@@ -38,3 +38,25 @@ $(window).on('load', function() {
     ease: Expo.easeOut,
   }, '-=0.6')
 })
+
+$('.landing-form').on('submit', function() {
+  return false;
+})
+
+$('.landing-form').find('input[type=text]').on('focus', function() {
+  $(this).removeClass('is-error');
+  $('.error-message').addClass('is-hidden');
+})
+
+$('.landing-form-submit').on('click', function() {
+  if($('.landing-form').find('input[type=text]').val().length < 1) {
+    $('.landing-form').find('input[type=text]').addClass('is-error');
+    $('.error-message').removeClass('is-hidden');
+  } else {
+    $(this).addClass('is-sent');
+    $('.landing-description').fadeOut(function() {
+      $('.landing-description').html('Thank you for subscribing lorem ipsum dolor sit amet, consectetur.');
+      $('.landing-description').fadeIn();
+    });
+  }
+})
