@@ -20082,9 +20082,15 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-form').find('input[type
   __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.error-message').addClass('is-hidden');
 });
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-form-submit').on('click', function () {
+  let email = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-form').find('input[type=text]').val();
+  let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-form').find('input[type=text]').val().length < 1) {
     __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-form').find('input[type=text]').addClass('is-error');
-    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.error-message').removeClass('is-hidden');
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.error-message').html('Input field is required.').removeClass('is-hidden');
+  } else if (re.test(email) === false) {
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-form').find('input[type=text]').addClass('is-error');
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.error-message').html('Please input valid email address').removeClass('is-hidden');
   } else {
     __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).addClass('is-sent');
     __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.landing-description').fadeOut(function () {

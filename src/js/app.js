@@ -49,9 +49,15 @@ $('.landing-form').find('input[type=text]').on('focus', function() {
 })
 
 $('.landing-form-submit').on('click', function() {
+  let email = $('.landing-form').find('input[type=text]').val();
+  let re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   if($('.landing-form').find('input[type=text]').val().length < 1) {
     $('.landing-form').find('input[type=text]').addClass('is-error');
-    $('.error-message').removeClass('is-hidden');
+    $('.error-message').html('Input field is required.').removeClass('is-hidden');
+  } else if(re.test(email) === false) {
+    $('.landing-form').find('input[type=text]').addClass('is-error');
+    $('.error-message').html('Please input valid email address').removeClass('is-hidden');
   } else {
     $(this).addClass('is-sent');
     $('.landing-description').fadeOut(function() {
