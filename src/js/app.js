@@ -6,8 +6,9 @@ import {
   TweenMax
 } from 'gsap';
 
+const tl = new TimelineMax();
+
 $(window).on('load', function() {
-  const tl = new TimelineMax();
   tl.to('.landing-mask', 1, {
     width: 0,
     ease: Power4.easeOut,

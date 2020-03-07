@@ -20042,8 +20042,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 
 
+const tl = new __WEBPACK_IMPORTED_MODULE_2_gsap__["a" /* TimelineMax */]();
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).on('load', function () {
-  const tl = new __WEBPACK_IMPORTED_MODULE_2_gsap__["a" /* TimelineMax */]();
   tl.to('.landing-mask', 1, {
     width: 0,
     ease: Power4.easeOut
