@@ -5,7 +5,7 @@
   "dependencies": {
     "fullpage.js": "^3.0.7",
     "gsap": "^2.1.2",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "jquery-bridget": "^2.0.1",
     "jquery-mousewheel": "^3.1.13",
     "jquery-scrollify": "^1.0.20",
